@@ -9,7 +9,6 @@ In this commit I intend to archive the project since I have no intention of work
 The assignment is mandatory and must be completed individually. You will be given a grade between 0 and 15. The assignment will count 15% towards your final grade.
 
 
-
 ## The Assignment
 
 ### Scenario
