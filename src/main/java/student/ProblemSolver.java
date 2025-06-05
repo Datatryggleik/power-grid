@@ -184,9 +184,13 @@ public class ProblemSolver implements IProblem {
 
     //O(n log n)
     private <T> PriorityQueue<T> getChildren(Graph<T> g, T parent, HashMap<T, Integer> weight) {
+        if (parent == null || g.degree(parent) == 0) //O(1)
+            return new PriorityQueue<>();
         PriorityQueue<T> sortedChildren = new PriorityQueue<>((o1, o2) -> -Integer.compare(weight.get(o1), weight.get(o2))); //O(log n)
 
         for (T n : g.neighbours(parent)) { //n iterations
+            if (n == null)
+                continue;
             if (weight.get(n) < weight.get(parent))
                 sortedChildren.add(n);
         }
